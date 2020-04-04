@@ -4,8 +4,8 @@ import time
 import datetime
 
 
-cap = cv2.VideoCapture('Relaxing Traffic.mp4')
-#cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('Highway Traffic.mp4')
+
 count1 = 0
 count2 = 0
 count3 = 0
@@ -95,8 +95,8 @@ while True:
     difference = cv2.absdiff(gauBlur1,gauBlur2)
     ret, thresh = cv2.threshold(difference, 10, 255, cv2.THRESH_BINARY)
     thresh = cv2.dilate(thresh, None, iterations=2)
-    thresh = cv2.erode(thresh,None,iterations=2)
-    _,contours,hierarchy = cv2.findContours(thresh.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+    thresh = cv2.erode(thresh, None, iterations=2)
+    contours,hierarchy = cv2.findContours(thresh.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
    
 
    
