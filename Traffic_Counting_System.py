@@ -4,7 +4,7 @@ import time
 import datetime
 
 
-cap = cv2.VideoCapture('Highway Traffic.mp4')
+cap = cv2.VideoCapture('Highway Traffic.mp4') #Video Input
 
 count1 = 0
 count2 = 0
